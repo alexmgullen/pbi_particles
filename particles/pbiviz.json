@@ -5,12 +5,12 @@
     "guid": "pbi_particles6E68F92180AD469B9E02AFA26154BA8D",
     "visualClassName": "Visual",
     "version": "0.1.0.0",
-    "description": "",
-    "supportUrl": "",
-    "gitHubUrl": ""
+    "description": "This is not a data visualization tool. This is a custom Power BI visual that allows you to display tsParticles in your dashboard.",
+    "supportUrl": "https://github.com/alexmgullen/pbi_particles/issues",
+    "gitHubUrl": "https://github.com/alexmgullen/pbi_particles"
   },
   "apiVersion": "5.3.0",
-  "author": { "name": "", "email": "" },
+  "author": { "name": "Alexander Gullen", "email": "developer@alexmgullen.ca" },
   "assets": { "icon": "assets/icon.png" },
   "externalJS": null,
   "style": "style/visual.less",
