@@ -1,0 +1,14 @@
+{
+  "dataRoles": [],
+  "objects": {},
+  "dataViewMappings": [],
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": ["https://grognard.ca"]
+    }
+  ],
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true
+}
