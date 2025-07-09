@@ -1,10 +1,10 @@
 {
   "visual": {
-    "name": "particles",
-    "displayName": "particles",
-    "guid": "particles6E68F92180AD469B9E02AFA26154BA8D",
+    "name": "pbi_particles",
+    "displayName": "pbi_particles",
+    "guid": "pbi_particles6E68F92180AD469B9E02AFA26154BA8D",
     "visualClassName": "Visual",
-    "version": "1.0.0.0",
+    "version": "0.1.0.0",
     "description": "",
     "supportUrl": "",
     "gitHubUrl": ""
@@ -17,5 +17,5 @@
   "capabilities": "capabilities.json",
   "dependencies": null,
   "stringResources": [],
-  "version": "1.0.0.0"
+  "version": "0.1.0.0"
 }

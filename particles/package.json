@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/fireworks": "^3.8.1",
     "@types/d3": "7.4.3",
     "d3": "7.9.0",
     "powerbi-visuals-api": "~5.3.0",
