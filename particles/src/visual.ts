@@ -11,6 +11,8 @@ import IVisual = powerbi.extensibility.visual.IVisual;
 import { tsParticles } from "@tsparticles/engine";
 import { loadBasic } from "@tsparticles/basic";
 
+import { fireworks } from "@tsparticles/fireworks"
+
 import { VisualFormattingSettingsModel } from "./settings";
 
 export class Visual implements IVisual {
@@ -19,34 +21,29 @@ export class Visual implements IVisual {
   private formattingSettings: VisualFormattingSettingsModel;
   private formattingSettingsService: FormattingSettingsService;
 
-  private particleCanvas: HTMLDivElement;
+  private particleCanvas: HTMLCanvasElement;
 
   constructor(options: VisualConstructorOptions) {
     this.formattingSettingsService = new FormattingSettingsService();
 
     if (document) {
-      this.particleCanvas = document.createElement("div");
+      this.particleCanvas = document.createElement("canvas");
       this.particleCanvas.id = "tsparticles";
       this.particleCanvas.setAttribute("width", "100%");
       this.particleCanvas.setAttribute("height", "100%");
 
-      loadBasic(tsParticles);
+      options.element.append(this.particleCanvas)
 
-      options.element.append(this.particleCanvas);
+      fireworks
+      .create(this.particleCanvas,
+        {
+          sounds:false
+        }
+      )
 
-      tsParticles
-        .load({
-          id: "tsparticles",
-          url: "https://grognard.ca/assets/data/FabricCommunityContests/particles.json",
-        })
-        .then((container) => {})
-        .catch((error) => {
-          console.error(error);
-        });
+      console.log(this.particleCanvas)
 
-      const particles = tsParticles.domItem(0);
-
-      particles.play();
+      
     }
   }
 
