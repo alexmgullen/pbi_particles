@@ -34,16 +34,12 @@ export class Visual implements IVisual {
 
       options.element.append(this.particleCanvas);
 
-      console.log("target: ", options.element);
-
       tsParticles
         .load({
           id: "tsparticles",
           url: "https://grognard.ca/assets/data/FabricCommunityContests/particles.json",
         })
-        .then((container) => {
-          console.log(container);
-        })
+        .then((container) => {})
         .catch((error) => {
           console.error(error);
         });
@@ -60,8 +56,6 @@ export class Visual implements IVisual {
         VisualFormattingSettingsModel,
         options.dataViews[0],
       );
-
-    console.log(this.particleCanvas);
   }
 
   /**
