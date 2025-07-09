@@ -9,6 +9,7 @@ import VisualUpdateOptions = powerbi.extensibility.visual.VisualUpdateOptions;
 import IVisual = powerbi.extensibility.visual.IVisual;
 
 import { tsParticles } from "@tsparticles/engine";
+import { loadBasic } from "@tsparticles/basic";
 
 import { VisualFormattingSettingsModel } from "./settings";
 
@@ -28,6 +29,8 @@ export class Visual implements IVisual {
       this.particleCanvas.id = "tsparticles";
       this.particleCanvas.setAttribute("width", "100%");
       this.particleCanvas.setAttribute("height", "100%");
+
+      loadBasic(tsParticles);
 
       options.element.append(this.particleCanvas);
 
