@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@tsparticles/fireworks": "^3.8.1"
+  }
+}

@@ -26,14 +26,8 @@ export class Visual implements IVisual {
     if (document) {
       this.particleCanvas = document.createElement("div");
       this.particleCanvas.id = "tsparticles";
-      this.particleCanvas.setAttribute(
-        "width",
-        options.element.clientWidth.toString(),
-      );
-      this.particleCanvas.setAttribute(
-        "height",
-        options.element.clientHeight.toString(),
-      );
+      this.particleCanvas.setAttribute("width", "100%");
+      this.particleCanvas.setAttribute("height", "100%");
 
       options.element.append(this.particleCanvas);
 
@@ -46,7 +40,6 @@ export class Visual implements IVisual {
         })
         .then((container) => {
           console.log(container);
-          console.log("starting tsparticles");
         })
         .catch((error) => {
           console.error(error);
@@ -55,8 +48,6 @@ export class Visual implements IVisual {
       const particles = tsParticles.domItem(0);
 
       particles.play();
-
-      console.log("pc", this.particleCanvas);
     }
   }
 
@@ -67,14 +58,7 @@ export class Visual implements IVisual {
         options.dataViews[0],
       );
 
-    this.particleCanvas.setAttribute(
-      "width",
-      options.viewport.width.toString(),
-    );
-    this.particleCanvas.setAttribute(
-      "height",
-      options.viewport.height.toString(),
-    );
+    console.log(this.particleCanvas);
   }
 
   /**
